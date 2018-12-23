@@ -1,0 +1,70 @@
+﻿<!--********************************************************************************
+ * For use by students taking 60-422 (Fall, 2014) to work on assignments and project.
+ * Permission required material. Contact: xyuan@uwindsor.ca 
+ * *******************************************************************************-->
+<Window x:Class="BookStoreGUI.EditBookDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        WindowStartupLocation="CenterOwner"
+        Title="Add / Edit Book" Height="325" Width="400" Loaded="Window_Loaded">
+     <Grid Margin="0,0,-0.4,-0.8">
+          <Grid.ColumnDefinitions>
+               <ColumnDefinition Width="Auto" />
+               <ColumnDefinition Width="Auto" />
+               <ColumnDefinition Width="Auto" />
+               <ColumnDefinition />
+          </Grid.ColumnDefinitions>
+          <Grid.RowDefinitions>
+               <RowDefinition Height="28" />
+               <RowDefinition Height="28" />
+               <RowDefinition Height="28" />
+               <RowDefinition Height="28" />
+               <RowDefinition Height="28" />
+               <RowDefinition Height="28" />
+               <RowDefinition Height="28" />
+               <RowDefinition Height="60" />
+               <RowDefinition Height="Auto" />
+               <RowDefinition Height="0*" />
+          </Grid.RowDefinitions>
+          <Label Grid.Column="0" Grid.Row="0" Margin="2,2,2,2" HorizontalAlignment="Right">ISBN:</Label>
+          <TextBox Name="isbnTextBox" Grid.Column="1"
+                 Grid.Row="0" Margin="2,0,2.4,1.8" Grid.ColumnSpan="3" IsEnabled="True" VerticalContentAlignment="Bottom" VerticalAlignment="Bottom" Height="23"/>
+          <Label Grid.Column="0" Grid.Row="1" Margin="2,2,2,2" HorizontalAlignment="Right">Title:</Label>
+          <TextBox Name="titleTextBox" Grid.Column="1"
+                 Grid.Row="1" Margin="2,0,2.4,1.6" Grid.ColumnSpan="3" IsEnabled="True" VerticalContentAlignment="Bottom" VerticalAlignment="Bottom" Height="23"/>
+          <Label Grid.Column="0" Grid.Row="2" Margin="2,2,2,2" HorizontalAlignment="Right">Author:</Label>
+          <TextBox Name="authorTextBox" Grid.Column="1"
+                 Grid.Row="2" Margin="2,0,2.4,1.6" Grid.ColumnSpan="3" IsEnabled="True" VerticalContentAlignment="Bottom" VerticalAlignment="Bottom" Height="23"/>
+          <Label Grid.Column="0" Grid.Row="4" Margin="2,2.2" HorizontalAlignment="Right">Unit Price:</Label>
+          <TextBox Name="priceTextBox" Grid.Column="1"
+                 Grid.Row="4" Margin="2,0,2.4,2.4" MinWidth="100" Grid.ColumnSpan="1" IsEnabled="True" VerticalContentAlignment="Bottom" VerticalAlignment="Bottom" Height="23"/>
+          <Label Grid.Column="2" Grid.Row="4" Margin="2,2,2,2" HorizontalAlignment="Right">Quantity:</Label>
+          <TextBox Name="quantityTextBox" Grid.Column="3"
+                 Grid.Row="4" Margin="2,0,2.4,1.6" MinWidth="100" VerticalContentAlignment="Bottom" VerticalAlignment="Bottom" Height="23"/>
+          <Label Grid.Column="0" Grid.Row="5" Margin="2,2,2,2" HorizontalAlignment="Right">Year:</Label>
+          <TextBox Name="yearTextBox" Grid.Column="1"
+                 Grid.Row="5" Margin="2,0,2.4,1.6" Grid.ColumnSpan="1" IsEnabled="True" VerticalContentAlignment="Bottom" VerticalAlignment="Bottom" Height="23"/>
+          <Label Grid.Column="2" Grid.Row="5" Margin="2,2,2,2" HorizontalAlignment="Right">Edition:</Label>
+          <TextBox Name="editionTextBox" Grid.Column="3"
+                 Grid.Row="5" Margin="2,0,2.4,1.6" Grid.ColumnSpan="1" IsEnabled="True" VerticalContentAlignment="Bottom" VerticalAlignment="Bottom" Height="23"/>
+          <Label Grid.Column="0" Grid.Row="3" Margin="2,2,2,2" HorizontalAlignment="Right">Publisher:</Label>
+          <TextBox Name="publisherTextBox" Grid.Column="1"
+                 Grid.Row="3" Margin="2,0,2.4,1.6" Grid.ColumnSpan="3" IsEnabled="True" VerticalContentAlignment="Bottom" VerticalAlignment="Bottom" Height="23"/>
+          <Label Grid.Column="0" Grid.Row="6" Margin="2,2,2,2" HorizontalAlignment="Right">Category ID:</Label>
+          <TextBox Name="categoryTextBox" Grid.Column="1"
+                 Grid.Row="6" Margin="2,0,2.4,1.6" MinWidth="80" VerticalContentAlignment="Bottom" VerticalAlignment="Bottom" Height="23"/>
+          <Label Grid.Column="2" Grid.Row="6" Margin="2,2,2,2" HorizontalAlignment="Right">Supplier ID:</Label>
+          <TextBox Name="supplierTextBox" Grid.Column="3"
+                 Grid.Row="6" Margin="2,0,2.4,1.6" MinWidth="80" VerticalContentAlignment="Bottom" VerticalAlignment="Bottom" Height="23"/>
+
+
+          <StackPanel Grid.Column="0" Grid.ColumnSpan="4"
+                    Grid.Row="7" Orientation="Horizontal"
+                    HorizontalAlignment="Center" Margin="0,0,0,0" Width="187">
+               <Button x:Name="okButton" Click="okButton_Click" IsDefault="True"
+                    MinWidth="80" Margin="12,10,5,18" MaxHeight="23" MaxWidth="23" Content="Add Book"/>
+               <Button x:Name="cancelButton" Click="cancelButton_Click" IsCancel="True"
+                    MinWidth="80" Margin="5,10,12,18" MaxHeight="23" MaxWidth="23" Content="Cancel"/>
+          </StackPanel>
+     </Grid>
+</Window>

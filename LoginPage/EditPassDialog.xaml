@@ -1,0 +1,25 @@
+﻿<Window x:Class="BookStoreGUI.EditPassDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BookStoreGUI"
+        mc:Ignorable="d"
+        Title="Change Password" Height="181.183" Width="400">
+    <Grid>
+        <Label Content="Old Password:" HorizontalAlignment="Left" Margin="10,14,0,0" VerticalAlignment="Top" 
+               Height="25" Width="100"/>
+        <TextBox x:Name="oldPassTextBox" Height="25" Margin="110,14,97.6,0" 
+                 TextWrapping="Wrap" VerticalAlignment="Top"/>
+
+        <Label Content="New Password:" HorizontalAlignment="Left" Margin="10,51,0,0" 
+               Height="25" Width="100" VerticalAlignment="Top"/>
+        <TextBox x:Name="newPassTextBox" Height="25" Margin="110,51,97.6,0" 
+                 TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+
+        <Button x:Name="okButton" IsDefault="True" Content="Submit" Padding="1" Click="submitButtonClick"
+                    Margin="50,0,240.6,10.2" Height="39" VerticalAlignment="Bottom"/>
+        <Button x:Name="cancelButton" IsDefault="True" Content="Cancel" Padding="1" Click="cancelButtonClick"
+                    Margin="231,0,54.6,10.2" Height="38" VerticalAlignment="Bottom"/>
+    </Grid>
+</Window>

@@ -1,0 +1,49 @@
+﻿<Window x:Class="BookStoreGUI.Wishlist"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BookStoreGUI"
+        mc:Ignorable="d"
+        Title="Wishlist" Height="236.8" Width="536">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="159*"/>
+            <ColumnDefinition Width="85*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Orientation="Vertical" Grid.ColumnSpan="2" Margin="0,0,-0.2,-0.2">
+            <DataGrid x:Name="wishListView" AutoGenerateColumns="False" Height="165"
+	    RowDetailsVisibilityMode="VisibleWhenSelected"                      
+		Width="490" HorizontalAlignment="Left" Margin="20,0,20,10"
+		SelectionMode="Single"      
+        ItemsSource = "{Binding}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding ISBN}" Visibility="Hidden"/>
+                    <DataGridTextColumn
+			x:Name="titleColumn" Binding="{Binding Title}"
+			Header="Title" Width="50*" />
+                    <DataGridTextColumn
+			x:Name="authorColumn" Binding="{Binding Author}"
+			Header="Author" Width="18*" />
+                    <DataGridTextColumn
+			x:Name="priceColumn" Binding="{Binding Price}"
+			Header="Price" Width="12*" CanUserSort="False" />
+                    <DataGridTextColumn
+			x:Name="yearColumn" Binding="{Binding Year}"
+			Header="Year" Width="8*" />
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
+            <Button x:Name="addButton"  MinWidth="106"
+                         Content="Add to Order" Click="addButton_Click"  Margin="120,170,0,0.667" Width="106" />
+            <Button x:Name="removeButton"  MinWidth="106"
+                         Content="Remove Book" Click="removeButton_Click" Margin="10,170,10,0.667" Width="106" />
+
+        </StackPanel>
+
+
+    </Grid>
+</Window>
